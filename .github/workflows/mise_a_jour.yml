@@ -1,0 +1,31 @@
+name: Mise a jour IPTV automatique
+
+on:
+  schedule:
+    - cron: '0 4 * * *' # S'exécute automatiquement tous les jours à 4h00 du matin
+  workflow_dispatch: # Permet de lancer le script manuellement d'un simple clic
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le code du dépôt
+        uses: actions/checkout@v4
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Installer les dépendances
+        run: pip install requests
+
+      - name: Exécuter le script de mise à jour
+        run: python update_iptv.py
+
+      - name: Sauvegarder les changements sur GitHub
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add playlist_finale.m3u
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🔄 Mise à jour automatique de la playlist" && git push)
