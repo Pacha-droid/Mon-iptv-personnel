@@ -1,0 +1,83 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",Eurosport_HD
+http://151.80.18.177:86/Eurosport_HD/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",Eurosport2_HD
+http://151.80.18.177:86/Eurosport_2_HD/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",Canal +Sport HD
+http://151.80.18.177:86/Canal+_sport_HD/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",Golf+HD
+http://151.80.18.177:86/GOLF+_HD/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",D17_HD
+http://151.80.18.177:86/D17_HD/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",France Urban_HD
+http://151.80.18.177:86/Trace_Urban_HD/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",M6_HD
+http://151.80.18.177:86/M6_HD/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",W9_HD
+http://151.80.18.177:86/W9_HD/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",Discovery_HD
+http://151.80.18.177:86/Discovery_HD/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",Histoire
+http://151.80.18.177:86/Histoire/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",RMC_DECOUVERTE_HD
+http://151.80.18.177:86/RMC_Decouverte_HD/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",TEVA_HD
+http://151.80.18.177:86/Teva_HD/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",National_Geo_HD
+http://151.80.18.177:86/National_Geo_HD/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",TF1_HD
+http://151.80.18.177:86/TF1_HD/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",AB1
+http://151.80.18.177:86/AB1/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",RTL9
+http://151.80.18.177:86/RTL9/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",Paris Première HD
+http://151.80.18.177:86/Paris_Premiere_HD/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",ARTE HD
+http://151.80.18.177:86/ARTE_HD/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",Canal +HD
+http://151.80.18.177:86/Canal+_HD/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",France 5 HD
+http://151.80.18.177:86/France_5_HD/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",France 3 HD
+http://151.80.18.177:86/France_3_HD/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",France 2 HD
+http://151.80.18.177:86/France_2_HD/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",sport
+https://tvturf4.janus.cl/playlist/stream.m3u8?d=w&id=
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",sport 1
+http://45.170.130.224:8000/play/a04i/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",sport 3
+http://live.talenttv.lk:8080/hls/x8kd5n3tm8e8lsv/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",sport 4
+https://mini.allinonereborn.fun/tata.php?id=11819
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",sport 5
+http://103.157.248.140:8000/play/a01m/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",sport 6
+https://636ffd31f0e12.streamlock.net/RacingStream2/RacingStream2/playlist.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",sport 7
+https://636ffd31f0e12.streamlock.net/RacingStream1/RacingStream1/playlist.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",sport 8
+https://d2hrvno5bw6tg2.cloudfront.net/smrtv-ch02/smil:ch-02.smil/master.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",sport 9
+https://partneta.cdn.mgmlcdn.com/omsport/smil:omsport.stream.smil/chunklist.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",sport 10
+http://ares.mnet.mk/hls/mnet-sport.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",sport 11
+https://d3uyzhwvmemdyf.cloudfront.net/v1/master/9d062541f2ff39b5c0f48b743c6411d25f62fc25/Hard-Knocks-DistroTV/109.m3u8?ads.vf=6pOF6kgy418
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",sport 12
+http://181.114.57.246:4000/play/BHGDIhvdyuw/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",sport 13
+https://d3d85c7qkywguj.cloudfront.net/scheduler/scheduleMaster/263.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",sport 14
+https://cors-proxy.cooks.fyi/http://147.135.114.221:8001/play/a00m/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",sport 15
+http://118.107.85.4:1935/live/smil:DNTV2.smil/chunklist.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",sport 16
+https://na.linear.zype.com/e0bd0e23-a958-4e43-8164-4f2fef8876a8/fd3614bd-90bf-4530-a277-65ae3a1720c8-zype/live.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",sport 17
+https://streams2.sofast.tv/scheduler/scheduleMaster/418.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",sport 18
+https://cnn.livestreaminggroup.info:3132/live/colimdotvlive.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="#EXTM3U",sport 19
+http://200.125.170.122:8000/play/a03j/index.m3u8
