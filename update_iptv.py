@@ -57,13 +57,11 @@ def generer_fichier_m3u(flux_trouves):
     except Exception as e:
         print(f"[-] Erreur lors de l'écriture du fichier : {e}")
 
+
+
+
 if __name__ == "__main__":
     flux = chercher_liens_mondial()
-    if flux:
-        generer_fichier_m3u(flux)
-    else:
-        print("[-] Aucun flux trouvé, le fichier existant n'a pas été modifié.")
-
-
-
+    # On force la génération du fichier même si la liste est vide pour éviter le bug de GitHub
+    generer_fichier_m3u(flux)
 
