@@ -1,31 +1,40 @@
-name: Mise a jour IPTV automatique
+name: Mise a jour Playlist Mondial 2026
 
 on:
   schedule:
-    - cron: '0 4 * * *' # S'exécute automatiquement tous les jours à 4h00 du matin
-  workflow_dispatch: # Permet de lancer le script manuellement d'un simple clic
+    # S'exécute automatiquement tous les jours à 5h00 du matin UTC
+    - cron: '0 5 * * *'
+  workflow_dispatch: # Permet de lancer la recherche manuellement en 1 clic
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Récupérer le code du dépôt
-        uses: actions/checkout@v4
+    - name: Récupérer le code du dépôt
+      uses: actions/checkout@v4
 
-      - name: Installer Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
+    - name: Configurer Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
 
-      - name: Installer les dépendances
-        run: pip install requests
+    - name: Installer les dépendances
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
 
-      - name: Exécuter le script de mise à jour
-        run: python update_iptv.py
+    - name: Exécuter le script de recherche
+      run: python "update script.py"
 
-      - name: Sauvegarder les changements sur GitHub
-        run: |
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
-          git add playlist_finale.m3u
-          git diff --quiet && git diff --staged --quiet || (git commit -m "🔄 Mise à jour automatique de la playlist" && git push)
+    - name: Configurer Git
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "41898282+github-actions[bot]@://github.com"
+
+    - name: Enregistrer la playlist sur le dépôt
+      run: |
+        git add playlist_mondial.m3u
+        git diff-index --quiet HEAD || git commit -m "Mise à jour automatique - Coupe du Monde 2026"
+        git push
+
