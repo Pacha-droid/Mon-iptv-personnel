@@ -27,14 +27,14 @@ jobs:
     - name: Exécuter le script de recherche
       run: python "update script.py"
 
-    - name: Configurer Git
+    -  name: Enregistrer la playlist sur le dépôt
       run: |
+        # Crée le fichier s'il n'existe pas pour éviter l'erreur Git
+        touch playlist_mondial.m3u
+        git add playlist_mondial.m3u
         git config --global user.name "github-actions[bot]"
         git config --global user.email "41898282+github-actions[bot]@://github.com"
-
-    - name: Enregistrer la playlist sur le dépôt
-      run: |
-        git add playlist_mondial.m3u
-        git diff-index --quiet HEAD || git commit -m "Mise à jour automatique - Coupe du Monde 2026"
-        git push
+        # On force la validation sans bloquer le script
+        git commit -m "Mise à jour automatique - Coupe du Monde 2026" || echo "Aucun changement"
+        git push || echo "Rien à envoyer"
 
