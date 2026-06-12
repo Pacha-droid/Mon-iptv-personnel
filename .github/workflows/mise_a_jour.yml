@@ -3,7 +3,7 @@ name: Mise a jour Playlist Mondial 2026
 on:
   schedule:
     # S'exécute automatiquement tous les jours à 5h00 du matin UTC
-    - cron: '0 5 * * *'
+    - cron: "0 5 * * *"
   workflow_dispatch: # Permet de lancer la recherche manuellement en 1 clic
 
 jobs:
@@ -27,14 +27,16 @@ jobs:
     - name: Exécuter le script de recherche
       run: python "update script.py"
 
-    -  name: Enregistrer la playlist sur le dépôt
+    - name: Configurer Git
       run: |
-        # Crée le fichier s'il n'existe pas pour éviter l'erreur Git
-        touch playlist_mondial.m3u
-        git add playlist_mondial.m3u
         git config --global user.name "github-actions[bot]"
         git config --global user.email "41898282+github-actions[bot]@://github.com"
-        # On force la validation sans bloquer le script
+
+    - name: Enregistrer la playlist sur le dépôt
+      run: |
+        touch playlist_mondial.m3u
+        git add playlist_mondial.m3u
         git commit -m "Mise à jour automatique - Coupe du Monde 2026" || echo "Aucun changement"
         git push || echo "Rien à envoyer"
+
 
