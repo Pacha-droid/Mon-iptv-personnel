@@ -5,7 +5,7 @@ def chercher_liens_mondial():
     # URL de la source IPTV publique francophone
     url_source = "https://githubusercontent.com"
     
-    # Mots-clés des diffuseurs officiels en clair pour le Mondial 2026
+        # Mots-clés des diffuseurs officiels + chaînes de secours permanentes
     filtres_diffuseurs = {
         "M6 (France)": ["m6", "metropole6"],
         "ARD (Allemagne)": ["ard", "das erste", "sportschau"],
@@ -15,8 +15,11 @@ def chercher_liens_mondial():
         "RTVE (Espagne)": ["la 1", "tve1", "rtve"],
         "RAI (Italie)": ["rai 1", "rai uno", "rai sport"],
         "TRT (Turquie)": ["trt 1", "trt spor"],
-        "beIN Open (MENA)": ["bein sports", "bein sports open"]
+        "beIN Open (MENA)": ["bein sports", "bein sports open"],
+        "France 2 (Secours)": ["france 2", "france2"],
+        "TV5 Monde (Secours)": ["tv5", "tv5monde"]
     }
+
 
     try:
         print(f"[+] Connexion à la source : {url_source}")
@@ -49,13 +52,19 @@ def generer_fichier_m3u(flux_trouves):
     try:
         with open(nom_fichier, "w", encoding="utf-8") as f:
             f.write("#EXTM3U\n")
-            for chaine, liens in flux_trouves.items():
-                for lien in liens:
-                    f.write(f'#EXTINF:-1 tvg-name="{chaine}" group-title="Coupe du Monde 2026", {chaine}\n')
-                    f.write(f"{lien}\n")
+            if not flux_trouves:
+                # Ligne de secours pour forcer Git à détecter et afficher le fichier
+                f.write('#EXTINF:-1, -- En attente de flux Coupe du Monde --\n')
+                f.write('http://example.com\n')
+            else:
+                for chaine, liens in flux_trouves.items():
+                    for lien in liens:
+                        f.write(f'#EXTINF:-1 tvg-name="{chaine}" group-title="Coupe du Monde 2026", {chaine}\n')
+                        f.write(f"{lien}\n")
         print(f"[+] Fichier {nom_fichier} généré avec succès.")
     except Exception as e:
         print(f"[-] Erreur lors de l'écriture du fichier : {e}")
+
 
 
 
