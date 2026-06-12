@@ -73,4 +73,5 @@ if __name__ == "__main__":
     flux = chercher_liens_mondial()
     # On force la génération du fichier même si la liste est vide pour éviter le bug de GitHub
     generer_fichier_m3u(flux)
+    
 
