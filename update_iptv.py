@@ -2,9 +2,15 @@ import re
 import requests
 
 def collecter_flux():
-        url_source = "https://raw.githubusercontent.com/Pacha-droid/Mon-iptv-personnel/main/playlist_finale.m3u"
-
-    cibles = ["m6", "tf1", "france 2", "bein"]
+    # Lien absolu vers votre fichier global en désordre
+    url_source = "https://raw.githubusercontent.com/Pacha-droid/Mon-iptv-personnel/main/playlist_finale.m3u"
+    
+    # Liste ultra-complète pour ne rater aucun match de la Coupe du Monde 2026
+    cibles = [
+        "m6", "tf1", "bein",                      # Diffuseurs principaux en France
+        "coupe du monde", "world cup", "fifa",    # Chaînes thématiques ou événements IPTV
+        "rts", "rtbf", "la une", "tipik"          # Diffuseurs gratuits Suisses et Belges (en français)
+    ]
     resultats = {}
 
     try:
@@ -46,6 +52,7 @@ def ecrire_playlist(donnees):
 if __name__ == "__main__":
     flux_trouves = collecter_flux()
     ecrire_playlist(flux_trouves)
+
 
     
 
