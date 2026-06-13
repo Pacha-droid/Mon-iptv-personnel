@@ -1,5 +1,3 @@
-Trouver les diffuseurs officiels en clair dans la région Afrique du Nord/Europe pour la Coupe du Monde
-
 name: Mise a jour Playlist Mondial 2026
 
 on:
@@ -10,6 +8,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # On donne l'autorisation au robot d'écrire et de push sur le dépôt
+    permissions:
+      contents: write
+      
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
@@ -28,16 +30,18 @@ jobs:
         pip install requests
 
     - name: Executer le script
-      run: python "update script.py"
+      # ATTENTION : Ajustez le nom exact de votre fichier ici (avec _ ou espace)
+      run: python "update_script.py"
 
     - name: Enregistrer les modifications
       run: |
         git config --global user.name "github-actions[bot]"
-        git config --global user.email "41898282+github-actions[bot]@://github.com"
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
         touch playlist_mondial.m3u
         git add playlist_mondial.m3u
         git commit -m "Mise a jour automatique des flux" || echo "Aucun changement detecte"
         git push || echo "Erreur lors du push"
+
 
 
 
