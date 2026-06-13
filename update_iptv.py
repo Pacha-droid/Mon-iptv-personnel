@@ -2,7 +2,7 @@ import re
 import requests
 
 def collecter_flux():
-    url_source = "https://githubusercontent.com"
+        url_source = "https://raw.githubusercontent.com/Pacha-droid/Mon-iptv-personnel/main/playlist_finale.m3u"
     cibles = ["m6", "tf1", "france 2", "bein"]
     resultats = {}
 
